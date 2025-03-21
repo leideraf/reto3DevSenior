@@ -15,7 +15,7 @@ class Producto:
         self.stock -= cantidad
 
 # Lista que contiene 50 objetos Producto ya creados. Cada uno representa un tipo de fruta o verdura con su ID, nombre, precio y stock inicial.
-productos = [
+lista_productos = [
     Producto(1, "Manzana (kg)", 3500, 50),
     Producto(2, "Banano (kg)", 2500, 40),
     Producto(3, "Naranja (kg)", 3000, 45),
@@ -70,11 +70,11 @@ productos = [
 
 # Funcion para obtener el producto por su id
 def obtener_producto(id_producto):
-    for producto in productos:
+    for producto in lista_productos:
         if producto.id == id_producto:
             return producto
     return None
 
 # Funcion que muestra los productos
 def mostrar_productos():
-    return productos
+    return lista_productos
